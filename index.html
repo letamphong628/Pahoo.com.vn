@@ -4,27 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pahoo Messenger</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <h2>Pahoo Messenger</h2>
-        <div id="login-section">
-            <input type="email" id="email" placeholder="Nhập email">
-            <input type="password" id="password" placeholder="Nhập mật khẩu">
-            <button id="login-btn">Đăng nhập</button>
-            <button id="register-btn">Đăng ký</button>
-        </div>
-        <div id="chat-section" style="display: none;">
-            <h3>Chat</h3>
-            <div id="messages"></div>
-            <input type="text" id="message-input" placeholder="Nhập tin nhắn">
-            <button id="send-btn">Gửi</button>
-        </div>
+    <h2>Pahoo Messenger</h2>
+
+    <!-- Khu vực đăng nhập -->
+    <div id="login-section">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Mật khẩu">
+        <button id="login-btn">Đăng nhập</button>
+        <button id="register-btn">Đăng ký</button>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"></script>
+
+    <!-- Khu vực chat -->
+    <div id="chat-section" style="display: none;">
+        <button id="logout-btn">Đăng xuất</button>
+        <div id="messages"></div>
+        <input type="text" id="message-input" placeholder="Nhập tin nhắn">
+        <button id="send-btn">Gửi</button>
+    </div>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
+    <!-- Import Firebase config và main.js -->
     <script src="firebase.js"></script>
     <script src="main.js"></script>
 </body>
